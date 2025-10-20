@@ -41,7 +41,7 @@ Computer_Vision_Football/
 
 ---
 
-## Getting Started
+## How to Run it
 
 ### 1) Create a Python environment
 ```bash
@@ -55,7 +55,7 @@ source .venv/bin/activate   # For Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 3) Prepare folders & weights
+### 3) Set up the model and input videos
 Create a **models/** folder at the repo root and add your YOLO model:
 - `models/best.pt` – detection model (players/referee/ball)
 
@@ -89,6 +89,7 @@ This project demonstrates several skills in Computer Vision and Machine Learning
 - Pre-processing and organisation of video data for model inference.  
 
  
+
 
 
 
