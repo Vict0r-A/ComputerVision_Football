@@ -1,0 +1,4 @@
+models/
+notes.txt
+object_detection/__pycache__
+object_tracking/__pycache__
