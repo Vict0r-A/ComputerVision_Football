@@ -7,7 +7,7 @@ This is a computer vision project that takes in a football video, and uses the Y
 
 It uses **Ultralytics YOLO** for detection (and optional keypoints/pose), **ByteTrack** via `supervision` for ID tracking, and custom drawing utilities for clean on-frame annotations.
 The link for the dataset is - 
- [Click here](https://www.kaggle.com/datasets/saberghaderi/-dfl-bundesliga-460-mp4-videos-in-30sec-csv)..
+ [Click here](https://www.kaggle.com/datasets/saberghaderi/-dfl-bundesliga-460-mp4-videos-in-30sec-csv).
 
 ---
 
@@ -46,7 +46,7 @@ Computer_Vision_Football/
 ### 1) Create a Python environment
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+source .venv/bin/activate   # For Windows: .venv\Scripts\activate
  
 ```
 
@@ -89,5 +89,6 @@ This project demonstrates several skills in Computer Vision and Machine Learning
 - Pre-processing and organisation of video data for model inference.  
 
  
+
 
 
