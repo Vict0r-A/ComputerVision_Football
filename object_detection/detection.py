@@ -15,15 +15,7 @@ class ObjectDetection:
         detections = sv.Detections.from_ultralytics(results)
         return detections
     
-    # def goalie_reassignment(self,detections):
-    #     class_remap = {1: 2}  # goalkeeper â†’ player
-    #     detections.class_id = np.array(
-    #     [class_remap.get(cls, cls) for cls in detections.class_id],
-    #     dtype=int)
-        
-    #     mask = detections.class_id == 2
-    #     detections = detections[mask]
-    #     return detections
+   
     
     def filter_players(self, detections):
         # Reassign goalkeeper â†’ player

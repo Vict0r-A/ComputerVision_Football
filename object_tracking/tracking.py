@@ -12,10 +12,10 @@ class ObjectTracker:
 
 
 class BallTracking:
-    """
-    Collect ball bboxes for all frames, then interpolate in one shot.
-    This matches the repo: df.interpolate().bfill() using future frames.
-    """
+
+    # Collect ball bboxes for all frames, then interpolate in one shot.
+    # 
+
     def __init__(self):
         self._bboxes = []  # list of [x1,y1,x2,y2] or NaNs
 
@@ -30,6 +30,6 @@ class BallTracking:
             return []
 
         df = pd.DataFrame(self._bboxes, columns=["x1","y1","x2","y2"], dtype=float)
-        df = df.interpolate().bfill()     #exactly like the repo
+        df = df.interpolate().bfill()      
         self._bboxes = df.to_numpy().tolist()
         return self._bboxes  # list of [x1,y1,x2,y2] for each frame

@@ -4,14 +4,14 @@ import numpy as np
 class PlayerRefereeAnnotation:
  
     def draw_ring(frame, bbox, color, track_id=None, label=None):
-        """
-        Draws a halo ellipse + optional ID/label box under a bounding box.
-        """
+    
+        # Draws a halo ring below the player and optional ID label
+
         y2 = int(bbox[3])
         x_center = int((bbox[0] + bbox[2]) / 2)
         width = int(bbox[2] - bbox[0])
 
-        # Halo ellipse
+        # ring annotation 
         cv2.ellipse(
             frame,
             center=(x_center, y2),
@@ -24,7 +24,7 @@ class PlayerRefereeAnnotation:
             lineType=cv2.LINE_4
         )
 
-        # Optional label box
+        # Optional ID label 
         if track_id is not None or label is not None:
             rectangle_width = 60
             rectangle_height = 20
@@ -48,18 +48,18 @@ class PlayerRefereeAnnotation:
 class BallAnnotation:
  
     def draw_triangle(frame, bbox, color=(0, 255, 255)):
-        """
-        Draws a downward yellow triangle with its tip at the top of the ball bbox.
-        """
+        
+        #Draws a downward yellow triangle to track the ball.
+      
         x1, y1, x2, y2 = map(int, bbox)
         if any(v is None or v != v for v in [x1, y1, x2, y2]):  # handle NaN
             return frame
 
         x_center = int((x1 + x2) / 2)
 
-        # Triangle points (tip exactly on bbox top)
+        # Triangle position points
         pts = np.array([
-            [x_center, y1],            # tip (on top of bbox)
+            [x_center, y1],            # tip on top of the boundin box
             [x_center - 12, y1 - 20],  # top-left
             [x_center + 12, y1 - 20]   # top-right
         ], np.int32)
