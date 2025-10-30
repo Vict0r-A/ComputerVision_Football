@@ -19,6 +19,9 @@ This is a computer vision project that takes in a football video, and uses the Y
  
 <img width="1440" height="900" alt="Screenshot 2025-10-30 at 22 47 43" src="https://github.com/user-attachments/assets/ccda4945-1769-488c-84e3-80ab129f141a" />
 ---
+
+
+
 ## Project Structure
 
 ```
@@ -73,5 +76,6 @@ The output video will be found in **`output_videos/`**.
 ---
 
  
+
 
 
