@@ -1,4 +1,4 @@
-# Computer Vision Football (Work in Progress)
+# Computer Vision Football 
 
 ## Current Functionality
 This is a computer vision project that takes in a football video, and uses the YOLOv8 model to perform object detection of ball, players and referee. Object tracking is performed for players using **ByteTrack** via `supervision` for ID tracking.
@@ -76,6 +76,7 @@ The output video will be found in **`output_videos/`**.
 ---
 
  
+
 
 
 
